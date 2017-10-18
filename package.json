@@ -1,0 +1,11 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "using NYT api to create a website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "qingxin",
+  "license": "ISC"
+}
