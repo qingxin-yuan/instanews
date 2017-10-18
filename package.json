@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "using NYT api to create a website",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qingxin-yuan/instanews"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
