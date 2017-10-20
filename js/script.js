@@ -26,15 +26,15 @@
         $.each(result, function (index, value) {
           if ((index < total) && (value.multimedia.length !== 0)) {
             length = value.multimedia.length;
-            console.log(value.multimedia);
-            $('.article').append('<li><a href="' + value.url + '"><img src="' + value.multimedia[length-1].url + '" class="article-image"><p class="article-abstract">' + value.abstract + '</p></a></li>');
+            // console.log(value.multimedia);
+            $('.article').append('<li><a href="' + value.url + '" target="_blank"><img src="' + value.multimedia[length-1].url + '" class="article-image"><p class="article-abstract">' + value.abstract + '</p></a></li>');
           }else if((index < total) && (value.multimedia.length===0)){
             total++;
           }
           else if (index ===total) {
             return false;
           }
-          console.log(index);
+          // console.log(index);
         })
       }).fail(function (err) {
         throw err;
