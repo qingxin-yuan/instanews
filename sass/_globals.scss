@@ -1,0 +1,29 @@
+* {
+  font-size: $base-size;
+  color: #ffffff;
+  font-family: 'Open Sans',sans-serif;
+  background: black; 
+  width: 100%;
+}
+p{
+  font-family: 'Open Sans',sans-serif;
+  font-size: 2*$base-size;
+  text-align: center;
+  padding: 3% 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+@mixin tablet{
+  @media (min-width: $tablet-width){
+    @content;
+  }
+}

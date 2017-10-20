@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+//complied in the stylesheet
+@import 'reset';
+@import 'fonts';
+@import 'globals'; // eg, link or header styles
+@import 'header';
+@import 'content';
+@import 'footer';
