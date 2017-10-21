@@ -12,7 +12,9 @@ li{
     position: absolute;
     bottom: 0;
     color: white;
+    height: auto;
     background: rgba(0,0,0, 0.4);
+    padding: 1%;
     @include tablet{
       height: 80px;
       font-size: $base-size;
@@ -25,8 +27,7 @@ li{
       height: 50vw;
     }
     @include desktop{
-
-  
+      // height: 50vw;
     }
   }
   @include tablet{
@@ -35,7 +36,7 @@ li{
   }
   @include desktop{
     flex-basis:25%;
-
+    // height: 50vw;
   }
 }
 
@@ -46,7 +47,7 @@ li{
     flex-wrap: wrap;
    }
    @include desktop {
-      flex-direction: row;
-      flex-wrap: wrap;
+      // flex-direction: row;
+      // flex-wrap: wrap;
    }
 }
