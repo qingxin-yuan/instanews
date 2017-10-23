@@ -1,12 +1,12 @@
 * {
   font-size: $base-size;
   color: #ffffff;
-  font-family: 'Open Sans',sans-serif;
   background: black; 
   width: 100%;
   box-sizing: border-box;
 }
 p{
+  font-family: 'Open Sans',sans-serif;
   font-size: $base-size;
   text-align: center;
   padding: 3% 0;

@@ -28,7 +28,7 @@
             return result;
           }
         }).slice(0,12).forEach(function(result){
-          $('.article').append('<li><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length-1].url + '" class="article-image"><p class="article-abstract">' + result.abstract + '</p></a></li>');
+          $('.article').append('<li class="article-item"><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length-1].url + '" class="article-image"><p class="article-abstract">' + result.abstract + '</p></a></li>');
         })
 
         //METHOD II - USING NESTED IF ELSE STATEMENTS
@@ -49,6 +49,9 @@
       })
       //IGNORE RETRIVED DATA IF FAILED
       .fail(function (err) {
+        //PRINT ERROR MESSAGE IF REQUEST FAILS
+        $('body').append('<p class="error-message">Sorry, there has been a problem, please some back later.</p>');
+
         throw err;
       })
       //REMOVE LOADING GIF WHEN FETCHING IS DONE
@@ -57,4 +60,4 @@
       });
     }
   });
-})(jQuery)
+})(jQuery);
