@@ -140,7 +140,9 @@ header {
   height: auto;
   padding: 0;
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in; }
   @media (min-width: 600px) {
     .header-after {
       -webkit-box-orient: horizontal;

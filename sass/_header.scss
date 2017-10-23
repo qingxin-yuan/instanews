@@ -19,6 +19,7 @@ header{
   padding: 0;
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: all .5s ease-in;
   @include tablet{
     flex-direction: row;
     width: 40vw;
