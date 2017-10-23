@@ -1,10 +1,5 @@
 (function ($) {
   $('select').change(function () {
-    // $('header').animate({
-    //   height: 'auto',
-    //   margin: '0 auto',
-    //   padding: 0
-    // }, 500);
     $('header').addClass('header-after');
     $('.logo').addClass('logo-after');
     //ADD LOADING GIF WHEN SELECTION BAR IS CLICKED
