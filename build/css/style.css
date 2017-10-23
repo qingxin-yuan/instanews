@@ -86,6 +86,12 @@ p {
   font-size: 16px;
   text-align: center;
   padding: 3% 0; }
+  @media (min-width: 600px) {
+    p {
+      font-size: 24px; } }
+  @media (min-width: 1000px) {
+    p {
+      font-size: 32px; } }
 
 body {
   display: -webkit-box;
@@ -104,6 +110,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -114,6 +124,10 @@ header {
   margin: 30% auto; }
   @media (min-width: 600px) {
     header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
       height: 420px;
       width: 50vw;
       margin: 30% 50% 30% 50px;
@@ -121,22 +135,29 @@ header {
           align-content: flex-start; } }
 
 .header-after {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: auto;
-  margin: 0;
-  padding: 5% 0; }
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 5vw;
+  padding: 5% 0;
+  width: 30vw; }
 
 .logo {
-  height: 50vw; }
+  height: 40vw; }
   @media (min-width: 600px) {
     .logo {
-      height: 300px;
+      height: 20vw;
       -webkit-box-pack: left;
           -ms-flex-pack: left;
               justify-content: left; } }
 
 .logo-after {
-  height: 100px;
-  width: 70px; }
+  height: 10vw;
+  width: 20vw; }
 
 .selection-form {
   display: -webkit-box;
@@ -149,16 +170,29 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 300px; }
+  padding: 20px 0; }
+  .selection-form p {
+    white-space: nowrap;
+    padding: 2vw 0; }
 
 select {
-  width: 200px;
+  width: 150px;
   background-color: white;
   margin: 0 auto;
   color: black;
-  height: 50px;
+  height: 35px;
   font-size: 16px;
   border-radius: 10px; }
+  @media (min-width: 600px) {
+    select {
+      font-size: 24px;
+      width: 200px;
+      height: 50px; } }
+  @media (min-width: 1000px) {
+    select {
+      font-size: 32px;
+      width: 300px;
+      height: 65px; } }
 
 .article {
   width: 100vw;

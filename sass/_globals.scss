@@ -4,18 +4,21 @@
   font-family: 'Open Sans',sans-serif;
   background: black; 
   width: 100%;
-  // height: 100%;
 }
 p{
   font-family: 'Open Sans',sans-serif;
   font-size: $base-size;
   text-align: center;
   padding: 3% 0;
+  @include tablet{
+    font-size: 1.5 * $base-size;
+  }
+  @include desktop{
+    font-size: 2 * $base-size;
+  }
 }
 body{
   display: flex;
   flex-direction: column;
-  // align-items: center;
   justify-content: center;
-  // height: 100%;
 }
