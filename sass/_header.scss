@@ -5,7 +5,6 @@ header{
   justify-content: center;
   align-items: center;
   height: 100vw;
-  // width: 100vw;
   margin: 30% auto;
   @include tablet{
     flex-direction: row;
@@ -13,20 +12,21 @@ header{
     width: 50vw;
     margin: 30% 50% 30% 50px;
     align-content: flex-start;
-    // flex-basis: 40%;
-  }
-  @include desktop{
-    // height: 420px;
   }
 }
 .header-after{
-  flex-direction: row;
   height: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 5vw;
-  padding: 5% 0;
-  width: 30vw;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include tablet{
+    flex-direction: row;
+    width: 40vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5vw;
+    padding: 3vw 0;
+  }
 }
 .logo{
   height: 40vw;
@@ -36,14 +36,14 @@ header{
   }
 }
 .logo-after{
-  height: 10vw;
-  width: 20vw;
+  height: 20vw;
+
 }
 .selection-form{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
   p{
     white-space: nowrap;
     padding: 2vw 0;

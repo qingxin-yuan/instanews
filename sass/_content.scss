@@ -1,23 +1,35 @@
 .article{
   width: 100vw;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include tablet{
+   flex-direction: row;
+   flex-wrap: wrap;
+  }
+  @include desktop {
+  
+  }
 }
 li{
   position: relative;
   padding: 0 auto;
   p{
     text-align: left;
+    height: auto;
     margin: 0 auto;
-    display: block;
     position: absolute;
     bottom: 0;
     color: white;
     height: auto;
     background: rgba(0,0,0, 0.4);
-    padding: 1%;
+    padding: 5px;
+    white-space:initial;
     @include tablet{
-      height: 80px;
-      font-size: $base-size;
+      font-size: 1.2*$base-size;
+    }
+    @include desktop{
+      font-size: 1.5*$base-size;
     }
   }
   img{
@@ -27,7 +39,7 @@ li{
       height: 50vw;
     }
     @include desktop{
-      // height: 50vw;
+      height: 40vw;
     }
   }
   @include tablet{
@@ -36,18 +48,9 @@ li{
   }
   @include desktop{
     flex-basis:25%;
-    // height: 50vw;
   }
 }
-
-.article {
-   flex-direction: column;
-   @include tablet{
-    flex-direction: row;
-    flex-wrap: wrap;
-   }
-   @include desktop {
-      // flex-direction: row;
-      // flex-wrap: wrap;
-   }
+.loading{
+  width: 50vw;
+  height: 50vw;
 }
