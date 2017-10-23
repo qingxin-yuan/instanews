@@ -1,5 +1,6 @@
 (function ($) {
   $('select').change(function () {
+    //REPOSITION/RESIZING HEADER AFTER SELECTION IS MADE
     $('header').addClass('header-after');
     $('.logo').addClass('logo-after');
     //ADD LOADING GIF WHEN SELECTION BAR IS CLICKED
