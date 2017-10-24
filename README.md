@@ -9,7 +9,7 @@ A simple app to retrive articles from New York Times using NYT API, animated usi
 * HTML5 was used, sass was used as CSS preprocessor due to its modular feature
 * Javascript/jQuery was used to retrive data and filter articles from NYT API
 * Gulp and packages including browser-sync, eslint, gulp-autoprefixer, gulp-cssnano, gulp-prettyerror, gulp-rename, gulp-sass, gulp-uglify to check syntax, create minimized css and js files, add prefixes to html elements and auto-refresh browser when changes were made for easier development
-* Hover to show/hide article abstracts
+* Hover to show/hide article abstracts in desktop version
 * Mobile-first RWD 
 ## Screenshot
 ![Alt text](/assets/images/screen-shot.png?raw=true "App Screenshot")
