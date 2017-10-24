@@ -14,7 +14,7 @@ A simple app to retrive articles from New York Times using NYT API, animated usi
 ## Screenshot
 ![Alt text](/assets/images/screen-shot.png?raw=true "App Screenshot")
 ## Author
-** Qingxin Yuan
-
-##Acknowledgement
-* 
+**Qingxin Yuan**
+## Acknowledgement
+* Thanks Rose and Jim for tips and advice
+* Thanks Red Academy for project prep
