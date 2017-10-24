@@ -1,10 +1,13 @@
 (function ($) {
   $('select').change(function () {
+
     //REPOSITION/RESIZING HEADER AFTER SELECTION IS MADE
     $('header').addClass('header-after');
     $('.logo').addClass('logo-after');
+
     //ADD LOADING GIF WHEN SELECTION BAR IS CLICKED
     $('ul').append('<li class="loading"><img src="./assets/images/ajax-loader.gif"></li>');
+
     //FETCH DATA FROM NYT API
     var input = $('select option:selected').val(), url;
     if (input !== 'sections') {
@@ -16,10 +19,11 @@
         url: url,
         method: 'GET'
       })
+
       //DATA PROCESSING IF RETRIVING DATA WAS SUCCESSFUL
       .done(function (result) {
         result = result.results;
-        //CLEARING CLEARING LOADING GIF AFTER DATA FETCHED
+
         //FUNCTION FOR ARTICLE FILTERING
         //METHOD I - FILTER & SLICE FUNCTION
         result.filter(function(result){
@@ -46,6 +50,7 @@
         //   }
         // })
       })
+
       //IGNORE RETRIVED DATA IF FAILED
       .fail(function (err) {
         //PRINT ERROR MESSAGE IF REQUEST FAILS
@@ -53,10 +58,10 @@
 
         throw err;
       })
+      
       //REMOVE LOADING GIF WHEN FETCHING IS DONE
       .always(function () {
         $('.loading').remove();
-        // $('article').append('<img src="./assets/images/ajax-loader.gif" class="loading">');
       });
     }
   });

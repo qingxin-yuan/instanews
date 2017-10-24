@@ -12,9 +12,9 @@ A simple app to retrive articles from New York Times using NYT API, animated usi
 * Hover to show/hide article abstracts
 * Mobile-first RWD 
 ## Screenshot
-
+![Alt text](/assets/images/screen-shot.png?raw=true "App Screenshot")
 ## Author
 ** Qingxin Yuan
 
-##Acknowledge
+##Acknowledgement
 * 
