@@ -28,7 +28,7 @@
             return result;
           }
         }).slice(0,12).forEach(function(result){
-          $('.article').append('<li class="article-item"><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length-1].url + '" class="article-image"><p class="article-abstract">' + result.abstract + '</p></a></li>');
+          $('ul').append('<li class="article-item"><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length-1].url + '" class="article-image"><p class="article-abstract">' + result.abstract + '</p></a></li>');
         })
 
         //METHOD II - USING NESTED IF ELSE STATEMENTS

@@ -1,4 +1,4 @@
-.article{
+ul{
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -8,17 +8,14 @@
    flex-direction: row;
    flex-wrap: wrap;
   }
-  @include desktop {
-  
-  }
 }
-.article-item{
+li{
   position: relative;
   padding: 0 auto;
   height: 100vw;
   p{
     text-align: left;
-    height: 200px;
+    height: 80px;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -26,28 +23,30 @@
     background: rgba(0,0,0, 0.4);
     padding: 5px;
     white-space:initial;
-    transform: translateY(200px);
+    
     transition: transform .5s ease-out;
     overflow: hidden;
     @include tablet{
+      height: 200px;
       font-size: 1.2*$base-size;
     }
     @include desktop{
       font-size: 1.5*$base-size;
+      transform: translateY(200px);
     }
   }
   &:hover p{
-    transform:translateY(0);
+    @include desktop{
+      transform:translateY(0);
+    }
   }
   img{
     height: 100vw;
     object-fit: cover;
     @include tablet{
-      
       height: 50vw;
     }
      @include desktop{
-      
       height: 40vw;
     }
   }
