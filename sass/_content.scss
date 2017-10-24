@@ -15,7 +15,7 @@ li{
   height: 100vw;
   p{
     text-align: left;
-    height: 80px;
+    height: 100px;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -23,7 +23,6 @@ li{
     background: rgba(0,0,0, 0.4);
     padding: 5px;
     white-space:initial;
-    
     transition: transform .5s ease-out;
     overflow: hidden;
     @include tablet{
@@ -59,7 +58,7 @@ li{
     height: 40vw;
   }
   }
-.loading{
-  width: 50vw;
-  height: 50vw;
+.loading img{
+  width: 25vw;
+  height: 25vw;
 }

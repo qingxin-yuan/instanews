@@ -4,7 +4,7 @@
     $('header').addClass('header-after');
     $('.logo').addClass('logo-after');
     //ADD LOADING GIF WHEN SELECTION BAR IS CLICKED
-    $('ul').append('<img src="./assets/images/ajax-loader.gif" class="loading">');
+    $('ul').append('<li class="loading"><img src="./assets/images/ajax-loader.gif"></li>');
     //FETCH DATA FROM NYT API
     var input = $('select option:selected').val(), url;
     if (input !== 'sections') {
@@ -14,13 +14,12 @@
       });
       $.ajax({
         url: url,
-        method: 'GET',
+        method: 'GET'
       })
       //DATA PROCESSING IF RETRIVING DATA WAS SUCCESSFUL
       .done(function (result) {
         result = result.results;
         //CLEARING CLEARING LOADING GIF AFTER DATA FETCHED
-        $('ul').empty();
         //FUNCTION FOR ARTICLE FILTERING
         //METHOD I - FILTER & SLICE FUNCTION
         result.filter(function(result){
@@ -28,7 +27,7 @@
             return result;
           }
         }).slice(0,12).forEach(function(result){
-          $('ul').append('<li class="article-item"><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length-1].url + '" class="article-image"><p class="article-abstract">' + result.abstract + '</p></a></li>');
+          $('ul').append('<li class="article-item"><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length-1].url + '"><p>' + result.abstract + '</p></a></li>');
         })
 
         //METHOD II - USING NESTED IF ELSE STATEMENTS
@@ -57,6 +56,7 @@
       //REMOVE LOADING GIF WHEN FETCHING IS DONE
       .always(function () {
         $('.loading').remove();
+        // $('article').append('<img src="./assets/images/ajax-loader.gif" class="loading">');
       });
     }
   });

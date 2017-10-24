@@ -229,7 +229,7 @@ li {
   height: 100vw; }
   li p {
     text-align: left;
-    height: 80px;
+    height: 100px;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -276,9 +276,9 @@ li {
           flex-basis: 25%;
       height: 40vw; } }
 
-.loading {
-  width: 50vw;
-  height: 50vw; }
+.loading img {
+  width: 25vw;
+  height: 25vw; }
 
 .copyright {
   color: #c2c2c2; }
