@@ -287,4 +287,7 @@ span {
   text-transform: uppercase; }
 
 footer {
-  margin: 50px auto; }
+  /* display: flex;
+  justify-content: center; */
+  margin: 50px auto;
+ }

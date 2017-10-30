@@ -1,3 +1,5 @@
+'use strict';
+
 (function ($) {
   $('select').change(function () {
 
@@ -9,9 +11,10 @@
     $('ul').append('<li class="loading"><img src="./assets/images/ajax-loader.gif"></li>');
 
     //FETCH DATA FROM NYT API
-    var input = $('select option:selected').val(), url;
+    var input = $('select option:selected').val(),
+        url = void 0;
     if (input !== 'sections') {
-      url = 'https://api.nytimes.com/svc/topstories/v2/' + input + '.json';
+      url = '\'https://api.nytimes.com/svc/topstories/v2/\'' + input + '.json';
       url += '?' + $.param({
         'api-key': 'd26bfdbb8f424d1a87afa99e2e8989b5'
       });
@@ -26,13 +29,13 @@
 
         //FUNCTION FOR ARTICLE FILTERING
         //METHOD I - FILTER & SLICE FUNCTION
-        result.filter(function(result){
-          if (result.multimedia.length !== 0){
+        result.filter(function (result) {
+          if (result.multimedia.length !== 0) {
             return result;
           }
-        }).slice(0,12).forEach(function(result){
-          $('ul').append('<li class="article-item"><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length-1].url + '"><p>' + result.abstract + '</p></a></li>');
-        })
+        }).slice(0, 12).forEach(function (result) {
+          $('ul').append('<li class="article-item"><a href="' + result.url + '" target="_blank"><img src="' + result.multimedia[result.multimedia.length - 1].url + '"><p>' + result.abstract + '</p></a></li>');
+        });
 
         //METHOD II - USING NESTED IF ELSE STATEMENTS
         // var total = 12,
@@ -54,11 +57,11 @@
       //IGNORE RETRIVED DATA IF FAILED
       .fail(function (err) {
         //PRINT ERROR MESSAGE IF REQUEST FAILS
-        $('body').append('<p class="error-message">Sorry, there has been a problem, please some back later.</p>');
+        $('body').append('<p class="error-message">Sorry, there has been a problem, please come back later.</p>');
 
         throw err;
       })
-      
+
       //REMOVE LOADING GIF WHEN FETCHING IS DONE
       .always(function () {
         $('.loading').remove();
