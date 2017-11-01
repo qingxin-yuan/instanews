@@ -1,5 +1,6 @@
 {
   "extends": "eslint:recommended",
+  "parser": "babel-eslint",
   "rules": {
     // our rules will go here...
     "no-alert": 1,
@@ -11,7 +12,6 @@
     "no-empty": 1,
     "no-param-reassign": 1,
     "no-unused-vars": 1,
-    "parser": "babel-eslint",
     "quotes": [ 1, "single"]
   },
   "globals": {

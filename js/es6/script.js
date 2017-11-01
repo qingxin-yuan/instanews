@@ -1,6 +1,7 @@
 (function ($) {
   $('select').change(()=> {
-
+   
+    $('ul').empty();
     //REPOSITION/RESIZING HEADER AFTER SELECTION IS MADE
     $('header').addClass('header-after');
     $('.logo').addClass('logo-after');
@@ -11,7 +12,7 @@
     //FETCH DATA FROM NYT API
     let input = $('select option:selected').val(), url;
     if (input !== 'sections') {
-      url = `'https://api.nytimes.com/svc/topstories/v2/'${input}.json`;
+      url = `https://api.nytimes.com/svc/topstories/v2/${input}.json`;
       url += '?' + $.param({
         'api-key': 'd26bfdbb8f424d1a87afa99e2e8989b5'
       });
@@ -22,6 +23,7 @@
 
       //DATA PROCESSING IF RETRIVING DATA WAS SUCCESSFUL
       .done((result)=> {
+
         result = result.results;
 
         //FUNCTION FOR ARTICLE FILTERING

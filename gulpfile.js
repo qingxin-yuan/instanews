@@ -30,12 +30,13 @@ gulp.task('babel', () => {
 });
 
 //run lint task first before run the script
-gulp.task('scripts',['lint','babel'], ()=> {
-  gulp.src('./js/es5/*.js')
+gulp.task('scripts',['lint'], ()=> {
+  return gulp.src('./js/es5/*.js')
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(gulp.dest('./build/js'))
 });
+
 gulp.task('lint', ()=> {
   return gulp.src(['./js/es5/*.js'])
     .pipe(eslint())
@@ -44,8 +45,9 @@ gulp.task('lint', ()=> {
 });
 gulp.task('watch', ()=> {
   gulp.watch('./sass/*.scss',['sass']);
-  gulp.watch('./js/es5/*.js', ['scripts']);
   gulp.watch('./js/es6/*.js',['babel']);
+  gulp.watch('./js/es5/*.js', ['scripts']);
+  
 });
 // browser auto-refresh on changes
 gulp.task('browser-sync', ()=> {
