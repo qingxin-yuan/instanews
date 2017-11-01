@@ -1,3 +1,6 @@
+import './main.scss';
+import $ from 'jquery';
+
 (function ($) {
   $('select').change(()=> {
    

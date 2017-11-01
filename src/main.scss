@@ -1,0 +1,10 @@
+@import 'components/sass/variables';
+@import 'components/sass/mixins';
+
+//complied in the stylesheet
+@import 'components/sass/reset';
+@import 'components/sass/fonts';
+@import 'components/sass/globals'; // eg, link or header styles
+@import 'components/sass/header';
+@import 'components/sass/content';
+@import 'components/sass/footer';
