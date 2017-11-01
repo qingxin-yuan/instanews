@@ -1,16 +1,16 @@
 import './main.scss';
 import $ from 'jquery';
 
-(function ($) {
+(function instaNews() {
   $('select').change(()=> {
    
     $('ul').empty();
     //REPOSITION/RESIZING HEADER AFTER SELECTION IS MADE
     $('header').addClass('header-after');
     $('.logo').addClass('logo-after');
-
+    $('body').addClass('body-after');
     //ADD LOADING GIF WHEN SELECTION BAR IS CLICKED
-    $('ul').append('<li class="loading"><img src="./assets/images/ajax-loader.gif"></li>');
+    $('ul').append('<li class="loading"><img src="/public/images/ajax-loader.gif"></li>');
 
     //FETCH DATA FROM NYT API
     let input = $('select option:selected').val(), url;
@@ -19,6 +19,7 @@ import $ from 'jquery';
       url += '?' + $.param({
         'api-key': 'd26bfdbb8f424d1a87afa99e2e8989b5'
       });
+      console.log(url);
       $.ajax({
         url: url,
         method: 'GET'
@@ -70,4 +71,4 @@ import $ from 'jquery';
       });
     }
   });
-})(jQuery);
+})();

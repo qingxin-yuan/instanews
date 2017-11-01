@@ -9,16 +9,17 @@ p{
   font-family: 'Open Sans',sans-serif;
   font-size: $base-size;
   text-align: center;
-  padding: 3% 0;
+  padding: 3vh 0;
   @include tablet{
     font-size: 1.5 * $base-size;
-  }
-  @include desktop{
-    font-size: 2 * $base-size;
   }
 }
 body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
+}
+.body-after{
+  height:auto;
 }
