@@ -4,13 +4,13 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vw;
+  // height: 100vw;
   margin: 30% auto;
   @include tablet{
     flex-direction: row;
     height: 420px;
     width: 50vw;
-    margin: 30% 50% 30% 50px;
+    margin: 50px;
     align-content: flex-start;
   }
 }

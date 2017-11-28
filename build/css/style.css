@@ -74,7 +74,7 @@ table {
   font-weight: bold;
   font-style: italic; }
 
-* {
+html {
   font-size: 16px;
   color: #ffffff;
   background: black;
@@ -104,7 +104,8 @@ body {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  height: 100vh; }
 
 header {
   padding: 10% 0;
@@ -121,7 +122,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vw;
   margin: 30% auto; }
   @media (min-width: 600px) {
     header {
@@ -131,7 +131,7 @@ header {
               flex-direction: row;
       height: 420px;
       width: 50vw;
-      margin: 30% 50% 30% 50px;
+      margin: 50px;
       -ms-flex-line-pack: start;
           align-content: flex-start; } }
 
@@ -287,7 +287,4 @@ span {
   text-transform: uppercase; }
 
 footer {
-  /* display: flex;
-  justify-content: center; */
-  margin: 50px auto;
- }
+  padding: 50px 0; }

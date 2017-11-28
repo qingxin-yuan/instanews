@@ -1,9 +1,10 @@
-* {
+html {
   font-size: $base-size;
   color: #ffffff;
   background: black; 
   width: 100%;
   box-sizing: border-box;
+
 }
 p{
   font-family: 'Open Sans',sans-serif;
@@ -21,4 +22,5 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
 }
