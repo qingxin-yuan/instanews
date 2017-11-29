@@ -46,9 +46,9 @@ header{
 }
 select{
   width: 150px;
-  background-color: white;
+  background-color: $color-main;
   margin: 0 auto;
-  color: black;
+  color: $color-background;
   height:30px;
   font-size: $base-size;
   border-radius: 10px;
