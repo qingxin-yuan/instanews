@@ -23,7 +23,7 @@ li{
   }
   p{
     text-align: left;
-    height: 100px;
+    height: auto;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -33,7 +33,6 @@ li{
     white-space:initial;
     transition: transform .5s ease-out;
     overflow: hidden;
-    
     @include desktop{
       transform: translateY(210px);
     }
