@@ -1,5 +1,8 @@
 # Instanews
 A simple app to retrive articles from New York Times using NYT API, animated using CSS and incorporated mobile-first responsive design.
+## Setup
+1. Run ```npm install``` to install node modules
+2. Run ```gulp``` to run gulp for local hosting
 ## Structures
 * HTML structure: header, article section and footer
 * SCSS styling: partials imported into style.scss, complied into style.css using gulp-sass
