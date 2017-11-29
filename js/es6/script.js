@@ -27,7 +27,7 @@
         result = result.results;
 
         //FUNCTION FOR ARTICLE FILTERING
-        //METHOD I - FILTER & SLICE FUNCTION
+        //- FILTER & SLICE FUNCTION
         result.filter((result)=>{
           if (result.multimedia.length !== 0){
             return result;
@@ -36,21 +36,6 @@
           $('ul').append(`<li class="article-item"><a href="${result.url}" target="_blank"><img src="${result.multimedia[result.multimedia.length-1].url}"><p>${result.abstract}</p></a></li>`);
         })
 
-        //METHOD II - USING NESTED IF ELSE STATEMENTS
-        // var total = 12,
-        // length;
-        // $.each(result, function (index, value) {
-        //   if ((index < total) && (value.multimedia.length !== 0)) {
-        //     length = value.multimedia.length;
-        //     // console.log(value.multimedia);
-        //     $('.article').append('<li><a href="' + value.url + '" target="_blank"><img src="' + value.multimedia[length-1].url + '" class="article-image"><p class="article-abstract">' + value.abstract + '</p></a></li>');
-        //   }else if((index < total) && (value.multimedia.length===0)){
-        //     total++;
-        //   }
-        //   else if (index ===total) {
-        //     return false;
-        //   }
-        // })
       })
 
       //IGNORE RETRIVED DATA IF FAILED
