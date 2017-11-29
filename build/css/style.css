@@ -264,15 +264,10 @@ li {
       -webkit-transform: translateY(0);
               transform: translateY(0); } }
   li img {
-    height: 100vw;
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
-    @media (min-width: 600px) {
-      li img {
-        height: 50vw; } }
-    @media (min-width: 1000px) {
-      li img {
-        height: 40vw; } }
 
 .loading img {
   width: 25vw;
