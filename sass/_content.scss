@@ -12,14 +12,14 @@ ul{
 li{
   position: relative;
   margin: 0 auto;
-  height: 100vw;
+  height: 60vw;
   @include tablet{
     width: 33.333vw;
-    height: 50vw;
+    height: 40vw;
   }
   @include desktop{
     width:25vw;
-    height: 40vw;
+    height: 30vw;
   }
   p{
     text-align: left;
