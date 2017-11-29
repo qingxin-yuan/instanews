@@ -225,8 +225,16 @@ ul {
 
 li {
   position: relative;
-  padding: 0 auto;
+  margin: 0 auto;
   height: 100vw; }
+  @media (min-width: 600px) {
+    li {
+      width: 33.333vw;
+      height: 50vw; } }
+  @media (min-width: 1000px) {
+    li {
+      width: 25vw;
+      height: 40vw; } }
   li p {
     text-align: left;
     height: 100px;
@@ -249,8 +257,8 @@ li {
     @media (min-width: 1000px) {
       li p {
         font-size: 24px;
-        -webkit-transform: translateY(200px);
-                transform: translateY(200px); } }
+        -webkit-transform: translateY(210px);
+                transform: translateY(210px); } }
   @media (min-width: 1000px) {
     li:hover p {
       -webkit-transform: translateY(0);
@@ -265,16 +273,6 @@ li {
     @media (min-width: 1000px) {
       li img {
         height: 40vw; } }
-  @media (min-width: 600px) {
-    li {
-      -ms-flex-preferred-size: 33.333%;
-          flex-basis: 33.333%;
-      height: 50vw; } }
-  @media (min-width: 1000px) {
-    li {
-      -ms-flex-preferred-size: 25%;
-          flex-basis: 25%;
-      height: 40vw; } }
 
 .loading img {
   width: 25vw;

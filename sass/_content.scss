@@ -11,8 +11,16 @@ ul{
 }
 li{
   position: relative;
-  padding: 0 auto;
+  margin: 0 auto;
   height: 100vw;
+  @include tablet{
+    width: 33.333vw;
+    height: 50vw;
+  }
+  @include desktop{
+    width:25vw;
+    height: 40vw;
+  }
   p{
     text-align: left;
     height: 100px;
@@ -31,7 +39,7 @@ li{
     }
     @include desktop{
       font-size: 1.5*$base-size;
-      transform: translateY(200px);
+      transform: translateY(210px);
     }
   }
   &:hover p{
@@ -49,14 +57,7 @@ li{
       height: 40vw;
     }
   }
-  @include tablet{
-    flex-basis: 33.333%;
-    height: 50vw;
-  }
-  @include desktop{
-    flex-basis:25%;
-    height: 40vw;
-  }
+  
   }
 .loading img{
   width: 25vw;

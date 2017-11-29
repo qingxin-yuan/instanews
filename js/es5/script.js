@@ -3,9 +3,11 @@
 (function ($) {
   $('select').change(function () {
 
+    $('ul').empty();
     //REPOSITION/RESIZING HEADER AFTER SELECTION IS MADE
     $('header').addClass('header-after');
     $('.logo').addClass('logo-after');
+    $('body').css('height', 'auto');
 
     //ADD LOADING GIF WHEN SELECTION BAR IS CLICKED
     $('ul').append('<li class="loading"><img src="./assets/images/ajax-loader.gif"></li>');
@@ -14,7 +16,7 @@
     var input = $('select option:selected').val(),
         url = void 0;
     if (input !== 'sections') {
-      url = '\'https://api.nytimes.com/svc/topstories/v2/\'' + input + '.json';
+      url = 'https://api.nytimes.com/svc/topstories/v2/' + input + '.json';
       url += '?' + $.param({
         'api-key': 'd26bfdbb8f424d1a87afa99e2e8989b5'
       });
