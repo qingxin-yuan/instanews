@@ -87,12 +87,6 @@ p {
   font-size: 16px;
   text-align: center;
   padding: 3% 0; }
-  @media (min-width: 600px) {
-    p {
-      font-size: 24px; } }
-  @media (min-width: 1000px) {
-    p {
-      font-size: 32px; } }
 
 body {
   display: -webkit-box;
@@ -138,8 +132,7 @@ header {
 .header-after {
   height: auto;
   padding: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
   @media (min-width: 600px) {
@@ -149,9 +142,6 @@ header {
           -ms-flex-direction: row;
               flex-direction: row;
       width: 40vw;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 5vw;
       padding: 3vw 0; } }
 
 .logo {
@@ -164,7 +154,7 @@ header {
               justify-content: left; } }
 
 .logo-after {
-  height: 20vw; }
+  height: 12vw; }
 
 .selection-form {
   display: -webkit-box;
@@ -187,19 +177,9 @@ select {
   background-color: white;
   margin: 0 auto;
   color: black;
-  height: 35px;
+  height: 25px;
   font-size: 16px;
   border-radius: 10px; }
-  @media (min-width: 600px) {
-    select {
-      font-size: 24px;
-      width: 200px;
-      height: 50px; } }
-  @media (min-width: 1000px) {
-    select {
-      font-size: 32px;
-      width: 300px;
-      height: 65px; } }
 
 ul {
   width: 100vw;
@@ -250,13 +230,8 @@ li {
     transition: transform .5s ease-out;
     transition: transform .5s ease-out, -webkit-transform .5s ease-out;
     overflow: hidden; }
-    @media (min-width: 600px) {
-      li p {
-        height: 200px;
-        font-size: 19.2px; } }
     @media (min-width: 1000px) {
       li p {
-        font-size: 24px;
         -webkit-transform: translateY(210px);
                 transform: translateY(210px); } }
   @media (min-width: 1000px) {

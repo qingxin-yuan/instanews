@@ -17,15 +17,11 @@ header{
 .header-after{
   height: auto;
   padding: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0;
   transition: all .5s ease-in-out;
   @include tablet{
     flex-direction: row;
     width: 40vw;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 5vw;
     padding: 3vw 0;
   }
 }
@@ -37,8 +33,7 @@ header{
   }
 }
 .logo-after{
-  height: 20vw;
-
+  height: 12vw;
 }
 .selection-form{
   display: flex;
@@ -55,17 +50,7 @@ select{
   background-color: white;
   margin: 0 auto;
   color: black;
-  height: 35px;
+  height:25px;
   font-size: $base-size;
   border-radius: 10px;
-  @include tablet{
-    font-size: 1.5 * $base-size;
-    width: 200px;
-    height: 50px;
-  }
-  @include desktop{
-    font-size: 2 * $base-size;
-    width: 300px;
-    height: 65px;
-  }
 }
